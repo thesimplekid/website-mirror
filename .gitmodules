@@ -1,15 +1,10 @@
-[submodule "airspace-hugo"]
-	path = airspace-hugo
-	url = https://github.com/themefisher/airspace-hugo.git
-[submodule "themes/airspace-hugo"]
-	path = themes/airspace-hugo
-	url = https://github.com/themefisher/airspace-hugo.git
-[submodule "themes/ananke"]
-	path = themes/ananke
-	url = https://github.com/budparr/gohugo-theme-ananke.git
 [submodule "hugograyscale"]
 	path = hugograyscale
 	url = https://github.com/runningstream/hugograyscale.git
 [submodule "themes/hugograyscale"]
 	path = themes/hugograyscale
 	url = https://github.com/runningstream/hugograyscale.git
+[submodule "public"]
+	path = public
+	url = git@github.com:thesimplekid/thesimplekid.github.io.git
+	branch = main
