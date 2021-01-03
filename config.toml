@@ -1,0 +1,10 @@
+baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "My New Hugo Site"
+theme = "hugograyscale"
+disableKinds = ["taxonomy", "taxonomyTerm"]
+
+
+[params]
+    copyright = "2021 Brendan Murphy"
+
