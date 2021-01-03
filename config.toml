@@ -1,6 +1,6 @@
 baseURL = "thesimplekid.github.io"
 languageCode = "en-us"
-title = "My New Hugo Site"
+title = "Brendan Murphy"
 theme = "hugograyscale"
 disableKinds = ["taxonomy", "taxonomyTerm"]
 
