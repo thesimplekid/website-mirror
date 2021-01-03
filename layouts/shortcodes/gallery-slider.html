@@ -1,4 +1,4 @@
-<div class="slide-container" style="height:{{ (.Get `height`) }}; width:{{ (.Get `width`) }}">
+<div class="slide-container" style="height:{{ (.Get `height`) }}; width:{{ (.Get `width`) }};">
     {{with (.Get `dir`)}}
     {{- $files := readDir (print "/static/" .) }}
     {{$.Scratch.Set "countPic" (len $files)}}
