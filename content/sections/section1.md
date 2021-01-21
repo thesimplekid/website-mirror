@@ -1,6 +1,7 @@
 ---
 title: "About"
 weight: 2
+section_id: "about"
 ---
 
 ## About Me

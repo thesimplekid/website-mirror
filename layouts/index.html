@@ -1,0 +1,61 @@
+{{ define "headStyle" }}
+<style>
+    body {
+        position: relative;
+    }
+
+    #heading {
+        padding-top: 50px;
+        height: 500px;
+        color: #fff;
+        background-color: black;
+    }
+
+    #about {
+        padding-top: 50px;
+        height: 500px;
+        color: #fff;
+        background-color: black;
+    }
+
+    #projects {
+        padding-top: 50px;
+        height: 500px;
+        color: #fff;
+        background-color: black;
+    }
+
+    #interests {
+        padding-top: 50px;
+        height: 500px;
+        color: #fff;
+        background-color: black;
+    }
+
+    #contact {
+        padding-top: 50px;
+        height: 500px;
+        color: #fff;
+        background-color: black;
+    }
+</style>
+
+{{ end }}
+
+
+{{ define "main" }}
+
+{{ $sections := $.Site.GetPage "/sections" }}
+
+{{ range $elem := $sections.Resources}}
+
+<div id="{{ $elem.Params.section_id }}" class="container-fluid">
+
+    {{.Content}}
+
+</div>
+
+
+{{ end }}
+
+{{ end }}
