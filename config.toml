@@ -1,9 +1,4 @@
-baseURL = "thesimplekid.github.io"
+baseURL = "https://brendanmurphy.xyz"
 languageCode = "en-us"
 title = "Brendan Murphy"
 disableKinds = ["taxonomy", "taxonomyTerm"]
-
-
-[params]
-    copyright = "2021 Brendan Murphy"
-
