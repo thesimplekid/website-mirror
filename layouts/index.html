@@ -4,37 +4,67 @@
         position: relative;
     }
 
+    .btn-outline-primary {
+        border-color: white;
+        color: #FFF;
+    }
+
     #heading {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         padding-top: 50px;
-        height: 500px;
-        color: #fff;
-        background-color: black;
+        height: 100vh;
+        overflow: auto;
+        color: white;
+        background-image: url('img/section0-bg.jpg')
+    }
+
+    .name {
+
+        font-size: 700%;
     }
 
     #about {
-        padding-top: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         height: 500px;
         color: #fff;
         background-color: black;
     }
 
     #projects {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         padding-top: 50px;
         height: 500px;
         color: #fff;
-        background-color: black;
+        background-image: url('img/section2-bg.jpg');
+        background-position: center;
+        background-size: cover;
     }
 
     #interests {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         padding-top: 50px;
-        height: 500px;
+        height: 750px;
         color: #fff;
         background-color: black;
     }
 
     #contact {
         padding-top: 50px;
-        height: 500px;
+        height: 300px;
+        color: #fff;
+        background-color: black;
+    }
+
+    #footer {
+        height: 30px;
         color: #fff;
         background-color: black;
     }
@@ -50,12 +80,50 @@
 {{ range $elem := $sections.Resources}}
 
 <div id="{{ $elem.Params.section_id }}" class="container-fluid">
-
-    {{.Content}}
-
-</div>
+    <div class="align-self-center d-flex h-500">
 
 
-{{ end }}
+        {{ if eq $elem.Params.title "Header"}}
+        <div class="col-sm-6 mx-auto">
 
-{{ end }}
+            <h1 class="text-center name">{{ $elem.Params.name }}</h1>
+
+            {{else if eq $elem.Params.title "Other Interests"}}
+            <div class="col-lg-8 mx-auto">
+                <div class="row">
+
+
+                    <div class="col-md-6">
+                        {{ .Scratch.Set "dir" "img/climbing/" }}
+                        {{ .Scratch.Set "carId" "vert"}}
+                        {{ partial "imageCarosel.html" . }}
+
+                    </div>
+                    <div class="col-md-6">
+                        <div class="row">
+                            {{ .Scratch.Set "dir" "img/horTop" }}
+                            {{ .Scratch.Set "carId" "horTop"}}
+                            {{ partial "imageCarosel" .}}
+                        </div>
+                        <div class="row">
+                            {{ .Scratch.Set "dir" "img/horBottom" }}
+                            {{ .Scratch.Set "carId" "horBottom"}}
+                            {{ partial "imageCarosel" . }}
+                        </div>
+                    </div>
+                </div>
+
+
+                {{ else }}
+                <div class="col-sm-6 mx-auto">
+                    <div class="text-center">{{ .Content }}</div>
+
+                    {{ end }}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {{ end }}
+
+    {{ end }}
