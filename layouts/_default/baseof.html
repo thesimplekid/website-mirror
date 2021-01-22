@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang=en>
+
+<head>
+
+    {{ partial "head.html" . }}
+    <meta charset="utf-8" />
+
+    {{ block "headStyle" . }}
+
+    {{ end }}
+
+
+
+
+
+</head>
+
+<body>
+
+    {{ block "main" . }}
+    {{ end }}
+
+    {{ partial "footer.html" . }}
+</body>
+
+</html>
