@@ -6,9 +6,9 @@ section_id: contact
 
 ## Contact Me
 
-{{< contactCards >}}
+{{< socailhandles >}}
 {{< linkedin user="brendanmurphy42" >}}
 {{< github user="thesimplekid" >}}
 {{< email email="brendan@btsk.xyz" >}}
 {{< resume >}}
-{{< /contactCards >}}
+{{< /socailhandles >}}
