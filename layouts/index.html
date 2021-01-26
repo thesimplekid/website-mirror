@@ -10,6 +10,10 @@
         color: #FFF;
     }
 
+    #container-fluid {
+        clear: both;
+    }
+
     #heading {
         display: flex;
         justify-content: center;
@@ -76,7 +80,7 @@
 
 {{ range $elem := $sections.Resources}}
 
-<div id="{{ $elem.Params.section_id }}" class="container-fluid">
+<section id="{{ $elem.Params.section_id }}" class="container-fluid">
     <div class="align-self-center d-flex h-500">
 
 
@@ -87,6 +91,8 @@
 
             {{else if eq $elem.Params.title "Other Interests"}}
             <div class="col-lg-8 mx-auto">
+
+                <h1 class="text-center">{{ $elem.Params.title }}</h1>
                 <div class="row">
 
 
@@ -113,14 +119,18 @@
 
                 {{ else }}
                 <div class="col-sm-6 mx-auto">
-                    <div class="text-center">{{ .Content }}</div>
+                    <div class="text-center">
+                        <h1>{{ $elem.Params.title }}</h1>
+                        {{ .Content }}
+                    </div>
 
                     {{ end }}
                 </div>
             </div>
         </div>
     </div>
+</section>
 
-    {{ end }}
+{{ end }}
 
-    {{ end }}
+{{ end }}

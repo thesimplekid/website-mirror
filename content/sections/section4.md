@@ -4,8 +4,6 @@ weight: 5
 section_id: contact
 ---
 
-## Contact Me
-
 {{< socailhandles >}}
 {{< linkedin user="brendanmurphy42" >}}
 {{< github user="thesimplekid" >}}
