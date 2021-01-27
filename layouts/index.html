@@ -3,15 +3,15 @@
     body {
         position: relative;
         background-color: black;
+        height: 100%;
     }
 
     .btn-outline-primary {
         border-color: white;
-        color: #FFF;
+        color: #fff;
     }
 
     .name {
-
         font-size: 700%;
     }
 
@@ -22,7 +22,6 @@
         padding-top: 50px;
         padding-bottom: 50px;
         color: #fff;
-
     }
 
     #heading {
@@ -31,12 +30,12 @@
         background-image: url('img/section0-bg.jpg');
     }
 
-    #about {
+    #about,
+    #projects {
         height: 500px;
     }
 
     #projects {
-        height: 500px;
         background-image: url('img/section2-bg.jpg');
         background-position: center;
         background-size: cover;
@@ -62,24 +61,21 @@
 
 {{ $sections := $.Site.GetPage "/sections" }}
 
-{{ range $elem := $sections.Resources}}
+{{ range $elem := $sections.Resources }}
 
 <section id="{{ $elem.Params.section_id }}" class="container-fluid">
 
 
-    {{ if eq $elem.Params.title "Header"}}
+    {{ if eq $elem.Params.title "Header" }}
     <div class="col-sm-6">
-
         <h1 class="text-center name">{{ $elem.Params.name }}</h1>
     </div>
 
-    {{else if eq $elem.Params.title "Other Interests"}}
+    {{ else if eq $elem.Params.title "Other Interests" }}
     <div class="col-lg-8">
-
 
         <h1 class="text-center">{{ $elem.Params.title }}</h1>
         <div class="row">
-
 
             <div class="col-md-6">
                 {{ .Scratch.Set "dir" "img/climbing/" }}
@@ -90,18 +86,17 @@
             <div class="col-md-6">
                 <div class="row">
                     {{ .Scratch.Set "dir" "img/horTop" }}
-                    {{ .Scratch.Set "carId" "horTop"}}
-                    {{ partial "imageCarosel" .}}
+                    {{ .Scratch.Set "carId" "horTop" }}
+                    {{ partial "imageCarosel" . }}
                 </div>
                 <div class="row">
                     {{ .Scratch.Set "dir" "img/horBottom" }}
-                    {{ .Scratch.Set "carId" "horBottom"}}
+                    {{ .Scratch.Set "carId" "horBottom" }}
                     {{ partial "imageCarosel" . }}
                 </div>
             </div>
         </div>
     </div>
-
 
     {{ else }}
     <div class="col-sm-6">
@@ -112,8 +107,6 @@
     </div>
 
     {{ end }}
-
-
 
 </section>
 
