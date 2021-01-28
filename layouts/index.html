@@ -32,25 +32,13 @@
 
     #about,
     #projects {
-        height: 500px;
+        min-height: 500px;
     }
 
     #projects {
         background-image: url('img/section2-bg.jpg');
         background-position: center;
         background-size: cover;
-    }
-
-    #interests {
-        height: 750px;
-    }
-
-    #contact {
-        height: 300px;
-    }
-
-    #footer {
-        height: 30px;
     }
 </style>
 
@@ -72,11 +60,10 @@
     </div>
 
     {{ else if eq $elem.Params.title "Other Interests" }}
-    <div class="col-lg-8">
+    <div class="col-lg-8 p-4">
 
-        <h1 class="text-center">{{ $elem.Params.title }}</h1>
-        <div class="row">
-
+        <h1 class=" text-center">{{ $elem.Params.title }}</h1>
+        <div class="row h-100 p-4">
             <div class="col-md-6">
                 {{ .Scratch.Set "dir" "img/climbing/" }}
                 {{ .Scratch.Set "carId" "vert"}}
