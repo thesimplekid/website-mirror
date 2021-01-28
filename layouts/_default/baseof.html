@@ -3,16 +3,13 @@
 
 <head>
 
+    <title>{{ .Site.Title }}</title>
+
     {{ partial "head.html" . }}
-    <meta charset="utf-8" />
+    {{ partial "meta.html" .}}
 
     {{ block "headStyle" . }}
-
     {{ end }}
-
-
-
-
 
 </head>
 

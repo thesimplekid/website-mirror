@@ -2,3 +2,6 @@ baseURL = "https://brendanmurphy.xyz"
 languageCode = "en-us"
 title = "Brendan Murphy"
 disableKinds = ["taxonomy", "taxonomyTerm"]
+
+[params]
+    description = "The website for Brendan Murphy"
